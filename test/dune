@@ -1,0 +1,12 @@
+(library
+ (name test_lib)
+ (modules test_lib)
+ (libraries mlsat alcotest))
+
+
+(tests
+ (names test_parse test_simpl test_solve)
+ (modules test_parse test_simpl test_solve)
+ (libraries mlsat alcotest test_lib)
+ (deps (source_tree "data/")))
+
